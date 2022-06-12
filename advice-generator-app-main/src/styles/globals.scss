@@ -40,8 +40,15 @@ html {
   width: 1px;
 }
 
-button {
-  background-color: var(--neon-green);
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 li {
@@ -51,10 +58,12 @@ li {
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-top: auto;
+  position: absolute;
+  bottom: 5px;
   color: white;
-}
-.attribution a {
-  // color: hsl(228, 45%, 44%);
-  color: var(--neon-green);
+
+  a {
+    // color: hsl(228, 45%, 44%);
+    color: var(--neon-green);
+  }
 }

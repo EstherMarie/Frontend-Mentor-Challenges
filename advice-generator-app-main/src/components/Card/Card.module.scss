@@ -1,0 +1,58 @@
+.card {
+  background-color: var(--dark-grayish-blue);
+  width: 100%;
+
+  position: relative;
+
+  padding: 40px 25px 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+
+  text-align: center;
+
+  border-radius: 10px;
+  box-shadow: 0 0 40px hsl(215, 23.1%, 10.2%);
+
+  .advice {
+    color: var(--neon-green);
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+    font-size: 1.15rem;
+  }
+
+  .quote {
+    color: var(--light-cyan);
+    font-size: var(--font-size-quote);
+    font-weight: 800;
+  }
+
+  .btn {
+    border-radius: 50%;
+    width: fit-content;
+    height: auto;
+    border: transparent;
+
+    padding: 20px;
+
+    position: absolute;
+    bottom: -33px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--neon-green);
+    transition: all 0.2s;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 15px var(--neon-green);
+      cursor: pointer;
+    }
+  }
+}
