@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
