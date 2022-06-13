@@ -77,8 +77,30 @@
 
 	&::after {
 		content: url('../../../public/advice-generator/images/pattern-divider-mobile.svg');
+	}
 
-		@media (min-width: 1000px) {
+	@media (min-width: 500px) {
+		padding: 47px 48px 72px;
+		margin-top: calc(50% - 338px);
+
+		.advice {
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 16px;
+			letter-spacing: 0.4em;
+		}
+
+		.quote {
+			padding-bottom: 40px;
+
+			font-style: normal;
+			font-weight: 700;
+			font-size: 27px;
+			line-height: 38px;
+			letter-spacing: 0.01em;
+		}
+
+		&::after {
 			content: url('../../../public/advice-generator/images/pattern-divider-desktop.svg');
 		}
 	}
