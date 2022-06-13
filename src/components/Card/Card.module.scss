@@ -79,9 +79,14 @@
 		content: url('../../../public/advice-generator/images/pattern-divider-mobile.svg');
 	}
 
-	@media (min-width: 500px) {
+	@media (min-width: 575px) {
 		padding: 47px 48px 72px;
-		margin-top: calc(50% - 338px);
+		margin-top: unset;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 
 		.advice {
 			font-weight: 700;
