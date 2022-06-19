@@ -1,112 +1,111 @@
 .card {
-	background-color: var(--dark-grayish-blue);
-	width: 100%;
-	max-width: 540px;
+  background-color: var(--dark-grayish-blue);
+  width: 100%;
+  max-width: 540px;
 
-	margin-top: 120px;
-	margin-inline: auto;
+  margin-top: 120px;
+  margin-inline: auto;
 
-	position: relative;
+  position: relative;
 
-	padding: 40px 24px 64px;
+  padding: 40px 24px 64px;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-	text-align: center;
+  text-align: center;
 
-	border-radius: 10px;
-	box-shadow: 0 0 40px hsl(215, 23.1%, 10.2%);
+  border-radius: 10px;
+  box-shadow: 0 0 40px hsl(215, 23.1%, 10.2%);
 
-	.advice {
-		color: var(--neon-green);
-		font-weight: 600;
-		font-size: 12px;
-		line-height: 16px;
-		letter-spacing: 0.26em;
-	}
+  .advice {
+    color: var(--neon-green);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.26em;
+  }
 
-	.quote {
-		color: var(--light-cyan);
-		font-size: var(--font-size-quote);
-		font-weight: 700;
-		font-size: 25px;
-		line-height: 33px;
-		text-align: center;
-		letter-spacing: -0.02em;
+  .quote {
+    color: var(--light-cyan);
+    font-size: var(--font-size-quote);
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: -0.02em;
 
-		padding-top: 28px;
-		padding-bottom: 23px;
+    padding-top: 28px;
+    padding-bottom: 23px;
 
-		&::before {
-			content: '“';
-		}
+    &::before {
+      content: "“";
+    }
 
-		&::after {
-			content: '”';
-		}
-	}
+    &::after {
+      content: "”";
+    }
+  }
 
-	.btn {
-		border-radius: 50%;
-		width: fit-content;
-		height: auto;
-		border: transparent;
+  .btn {
+    border-radius: 50%;
+    width: fit-content;
+    height: auto;
+    border: transparent;
 
-		padding: 20px;
+    padding: 20px;
 
-		position: absolute;
-		bottom: -33px;
+    position: absolute;
+    bottom: -33px;
 
-		display: flex;
-		justify-content: center;
-		align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-		background-color: var(--neon-green);
-		transition: all 0.2s;
+    background-color: var(--neon-green);
+    transition: all 0.2s;
 
-		&:hover,
-		&:focus,
-		&:active {
-			box-shadow: 0 0 15px var(--neon-green);
-			cursor: pointer;
-		}
-	}
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 15px var(--neon-green);
+      cursor: pointer;
+    }
+  }
 
-	&::after {
-		content: url('../../../public/advice-generator/images/pattern-divider-mobile.svg');
-	}
+  &::after {
+    content: url("../../../public/advice-generator/images/pattern-divider-mobile.svg");
+  }
 
-	@media (min-width: 575px) {
-		padding: 47px 48px 72px;
-		margin-top: unset;
+  @media (min-width: 575px) {
+    padding: 47px 48px 72px;
+    margin-top: unset;
 
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-		.advice {
-			font-weight: 700;
-			font-size: 12px;
-			line-height: 16px;
-			letter-spacing: 0.4em;
-		}
+    .advice {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.4em;
+    }
 
-		.quote {
-			padding-bottom: 40px;
+    .quote {
+      padding-bottom: 40px;
 
-			font-style: normal;
-			font-weight: 700;
-			font-size: 27px;
-			line-height: 38px;
-			letter-spacing: 0.01em;
-		}
+      font-style: normal;
+      font-weight: 700;
+      font-size: 27px;
+      line-height: 38px;
+      letter-spacing: 0.01em;
+    }
 
-		&::after {
-			content: url('../../../public/advice-generator/images/pattern-divider-desktop.svg');
-		}
-	}
+    &::after {
+      content: url("../../../public/advice-generator/images/pattern-divider-desktop.svg");
+    }
+  }
 }
