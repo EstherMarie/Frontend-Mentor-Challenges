@@ -36,7 +36,7 @@ export default function Card() {
 
       <button type="submit" onClick={() => fetchData()} className={styles.btn}>
         <Image
-          src="/advice-generator/images/icon-dice.svg"
+          src="/images/advice-generator/icon-dice.svg"
           alt="New Advice"
           width={24}
           height={24}

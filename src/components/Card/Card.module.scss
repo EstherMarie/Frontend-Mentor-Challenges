@@ -75,7 +75,7 @@
   }
 
   &::after {
-    content: url("../../../public/advice-generator/images/pattern-divider-mobile.svg");
+    content: url("../../../public/images/advice-generator/pattern-divider-mobile.svg");
   }
 
   @media (min-width: 575px) {
@@ -105,7 +105,7 @@
     }
 
     &::after {
-      content: url("../../../public/advice-generator/images/pattern-divider-desktop.svg");
+      content: url("../../../public/images/advice-generator/pattern-divider-desktop.svg");
     }
   }
 }
