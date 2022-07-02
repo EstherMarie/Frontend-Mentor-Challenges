@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import styles from "./Card.module.scss";
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import * as S from './Card.styled';
 
 interface ApiData {
   slip: {
@@ -17,8 +17,8 @@ export default function Card() {
   }, []);
 
   function fetchData() {
-    fetch("https://api.adviceslip.com/advice", {
-      cache: "no-cache",
+    fetch('https://api.adviceslip.com/advice', {
+      cache: 'no-cache',
     })
       .then(function (response) {
         return response.json();
@@ -29,19 +29,19 @@ export default function Card() {
   }
 
   return (
-    <div className={styles.card}>
-      <div className={styles.advice}>ADVICE #{data?.slip.id}</div>
+    <S.Card>
+      <div className='advice'>ADVICE #{data?.slip.id}</div>
 
-      <p className={styles.quote}>{data?.slip.advice}</p>
+      <p className='quote'>{data?.slip.advice}</p>
 
-      <button type="submit" onClick={() => fetchData()} className={styles.btn}>
+      <button type='submit' onClick={() => fetchData()} className='btn'>
         <Image
-          src="/images/advice-generator/icon-dice.svg"
-          alt="New Advice"
+          src='/images/advice-generator/icon-dice.svg'
+          alt='New Advice'
           width={24}
           height={24}
         />
       </button>
-    </div>
+    </S.Card>
   );
 }

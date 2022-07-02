@@ -1,5 +1,9 @@
-.card {
-  background-color: var(--dark-grayish-blue);
+import styled from 'styled-components';
+import { adviceGeneratorTheme } from '../../styles/themes';
+
+export const Card = styled.div`
+  background-color: ${adviceGeneratorTheme.theme.colors.neutral
+    .darkGrayishBlue};
   width: 100%;
   max-width: 540px;
 
@@ -21,7 +25,7 @@
   box-shadow: 0 0 40px hsl(215, 23.1%, 10.2%);
 
   .advice {
-    color: var(--neon-green);
+    color: ${adviceGeneratorTheme.theme.colors.primary.neonGreen};
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
@@ -29,8 +33,8 @@
   }
 
   .quote {
-    color: var(--light-cyan);
-    font-size: var(--font-size-quote);
+    color: ${adviceGeneratorTheme.theme.colors.primary.lightCyan};
+    font-size: ${adviceGeneratorTheme.theme.typography.fontSize};
     font-weight: 700;
     font-size: 25px;
     line-height: 33px;
@@ -41,11 +45,11 @@
     padding-bottom: 23px;
 
     &::before {
-      content: "“";
+      content: '“';
     }
 
     &::after {
-      content: "”";
+      content: '”';
     }
   }
 
@@ -64,18 +68,19 @@
     justify-content: center;
     align-items: center;
 
-    background-color: var(--neon-green);
+    background-color: ${adviceGeneratorTheme.theme.colors.primary.neonGreen};
     transition: all 0.2s;
 
     &:hover,
     &:focus {
-      box-shadow: 0 0 15px var(--neon-green);
+      box-shadow: 0 0 15px
+        ${adviceGeneratorTheme.theme.colors.primary.neonGreen};
       cursor: pointer;
     }
   }
 
   &::after {
-    content: url("../../../public/images/advice-generator/pattern-divider-mobile.svg");
+    content: url('/images/advice-generator/pattern-divider-mobile.svg');
   }
 
   @media (min-width: 575px) {
@@ -105,7 +110,7 @@
     }
 
     &::after {
-      content: url("../../../public/images/advice-generator/pattern-divider-desktop.svg");
+      content: url('/images/advice-generator/pattern-divider-desktop.svg');
     }
   }
-}
+`;
