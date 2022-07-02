@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { adviceGeneratorTheme } from '../../styles/themes';
+import { adviceGeneratorTheme } from './themes';
 
 export const Main = styled.main`
   width: 100vw;

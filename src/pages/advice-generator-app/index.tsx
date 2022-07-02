@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Card from '../../components/Card';
-import * as S from './styles';
+import * as S from '../../styles/adviceGenerator.styles';
 
 export default function AdviceGeneratorApp() {
   return (
