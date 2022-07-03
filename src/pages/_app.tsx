@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../styles/globals';
-import * as Themes from '../styles/themes';
+import { Themes } from '../styles/themes';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
