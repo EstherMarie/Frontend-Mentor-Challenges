@@ -1,6 +1,40 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+  DocumentInitialProps,
+} from 'next/document';
+
+import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
+
+    ctx.renderPage = () =>
+      originalRenderPage({
+        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+        enhanceComponent: (Component: any) => Component,
+      });
+
+    const initialProps = await Document.getInitialProps(ctx);
+
+    return {
+      ...initialProps,
+      styles: (
+        <>
+          {initialProps.styles}
+          {sheet.getStyleElement()}
+        </>
+      ) as unknown as React.ReactFragment,
+    };
+  }
+
   render() {
     return (
       <Html lang='en'>
@@ -9,7 +43,7 @@ class MyDocument extends Document {
             rel='icon'
             type='image/png'
             sizes='32x32'
-            href='/images/favicon-32x32.png'
+            href='/favicon-32x32.png'
           />
           <link
             href='https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&family=Public+Sans:wght@300;400;700&display=swap'
