@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { easyBankTheme } from '../../../styles/themes';
 
 export const Container = styled.div`
   max-width: 1100px;
@@ -12,5 +11,5 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  font-family: ${easyBankTheme.theme.typography.fontFamily};
+  font-family: ${({ theme }) => theme.theme.typography.fontFamily};
 `;

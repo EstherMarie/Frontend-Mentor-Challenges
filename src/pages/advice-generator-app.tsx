@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Card from '../components/adviceGenerator/Card';
-import * as S from '../styles/adviceGenerator.styles';
 
 export default function AdviceGeneratorApp() {
   return (
@@ -8,10 +7,7 @@ export default function AdviceGeneratorApp() {
       <Head>
         <title>Frontend Mentor | Advice generator app</title>
       </Head>
-      <S.Main>
-        <h1 className='sr-only'>Advice Generator App</h1>
-        <Card />
-      </S.Main>
+      <Card />
     </>
   );
 }
