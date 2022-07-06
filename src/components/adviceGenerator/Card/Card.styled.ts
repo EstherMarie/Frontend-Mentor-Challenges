@@ -3,13 +3,12 @@ import styled from 'styled-components';
 export const Main = styled.main`
   width: 100vw;
   height: 100vh;
-  background-color: ${({ theme }) => theme.theme.colors.neutral.darkBlue};
-  font-family: ${({ theme }) => theme.theme.typography.fontFamily};
+  background-color: ${({ theme }) => theme.colors.neutral.darkBlue};
+  font-family: ${({ theme }) => theme.typography.fontFamily};
 `;
 
 export const Card = styled.div`
-  background-color: ${({ theme }) =>
-    theme.theme.colors.neutral.darkGrayishBlue};
+  background-color: ${({ theme }) => theme.colors.neutral.darkGrayishBlue};
   width: 100%;
   max-width: 540px;
 
@@ -31,7 +30,7 @@ export const Card = styled.div`
   box-shadow: 0 0 40px hsl(215, 23.1%, 10.2%);
 
   .advice {
-    color: ${({ theme }) => theme.theme.colors.primary.neonGreen};
+    color: ${({ theme }) => theme.colors.primary.neonGreen};
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
@@ -39,8 +38,8 @@ export const Card = styled.div`
   }
 
   .quote {
-    color: ${({ theme }) => theme.theme.colors.primary.lightCyan};
-    font-size: ${({ theme }) => theme.theme.typography.fontSize};
+    color: ${({ theme }) => theme.colors.primary.lightCyan};
+    font-size: ${({ theme }) => theme.typography.fontSize};
     font-weight: 700;
     font-size: 25px;
     line-height: 33px;
@@ -74,13 +73,12 @@ export const Card = styled.div`
     justify-content: center;
     align-items: center;
 
-    background-color: ${({ theme }) => theme.theme.colors.primary.neonGreen};
+    background-color: ${({ theme }) => theme.colors.primary.neonGreen};
     transition: all 0.2s;
 
     &:hover,
     &:focus {
-      box-shadow: 0 0 15px
-        ${({ theme }) => theme.theme.colors.primary.neonGreen};
+      box-shadow: 0 0 15px ${({ theme }) => theme.colors.primary.neonGreen};
       cursor: pointer;
     }
   }
