@@ -20,9 +20,9 @@ describe('should not have any accessibility violations', () => {
   // FIXME: ReferenceError: fetch is not defined
   // Solution: node-fetch?? axios?
 
-  // test('test Advice Generator App', async () => {
+  // test("test Advice Generator App", async () => {
   //   const { container } = render(
-  //     <ThemeProvider theme={Themes.AdviceGeneratorAppTheme}>
+  //     <ThemeProvider theme={Themes}>
   //       <AdviceGeneratorApp />
   //     </ThemeProvider>
   //   );
@@ -32,9 +32,9 @@ describe('should not have any accessibility violations', () => {
 
   test('test Easybank Landing Page', async () => {
     const { container } = render(
-      <ThemeProvider theme={Themes.EasybankLandingPageTheme}>
+      <ThemeProvider theme={Themes}>
         <EasybankLandingPage />
-      </ThemeProvider>
+      </ThemeProvider>,
     );
     const results = await axe(container);
     expect(results).toHaveNoViolations();
