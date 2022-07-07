@@ -6,7 +6,7 @@ interface Themes {
 
 // TODO: create style guide for Homepage
 export const Themes: Themes = {
-  HomeTheme: {
+  home: {
     colors: {
       primary: {
         lightCyan: 'hsl(193, 38%, 86%)',
@@ -24,7 +24,7 @@ export const Themes: Themes = {
       fontWeight: 800,
     },
   },
-  AdviceGeneratorAppTheme: {
+  adviceGeneratorApp: {
     colors: {
       primary: {
         lightCyan: 'hsl(193, 38%, 86%)',
@@ -42,7 +42,7 @@ export const Themes: Themes = {
       fontWeight: 800,
     },
   },
-  EasybankLandingPageTheme: {
+  easybankLandingPage: {
     colors: {
       primary: {
         darkBlue: 'hsl(233, 26%, 24%)',
