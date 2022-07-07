@@ -27,11 +27,11 @@ export function Header() {
   }, []);
 
   return (
-    <S.Header>
+    <S.Header isNavMenuActive={isMenuOpen}>
       <Container>
         <Image
-          src='/images/easybank-landing-page/logo.svg'
-          alt='easyBank Logo'
+          src="/images/easybank-landing-page/logo.svg"
+          alt="easyBank Logo"
           width={130}
           height={20}
         />
@@ -40,25 +40,25 @@ export function Header() {
           <S.NavMenu>
             <ul>
               <li>
-                <a href='#'>Home</a>
+                <a href="#">Home</a>
               </li>
               <li>
-                <a href='#'>About</a>
+                <a href="#">About</a>
               </li>
               <li>
-                <a href='#'>Contact</a>
+                <a href="#">Contact</a>
               </li>
               <li>
-                <a href='#'>Blog</a>
+                <a href="#">Blog</a>
               </li>
               <li>
-                <a href='#'>Careers</a>
+                <a href="#">Careers</a>
               </li>
             </ul>
           </S.NavMenu>
         )}
 
-        <button className='menu-btn' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button className="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <Image
             src={isMenuOpen ? iconClose : iconHamburger}
             alt={isMenuOpen ? 'Close menu' : 'Open menu'}
