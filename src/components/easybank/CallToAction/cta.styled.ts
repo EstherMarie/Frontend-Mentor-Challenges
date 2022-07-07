@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledCTA = styled.button`
-  background: linear-gradient(274.17deg, #2ab6d9 0%, #33d35e 100%);
+  background: linear-gradient(274.17deg, ${({theme}) => theme.easybankLandingPage.colors.primary.brightCyan} 0%, ${({theme}) => theme.easybankLandingPage.colors.primary.limeGreen} 100%);
   border-radius: 20px;
   border: none;
 
@@ -12,7 +12,7 @@ export const StyledCTA = styled.button`
   align-items: center;
   text-align: center;
 
-  color: #ffffff;
+  color: ${({theme}) => theme.easybankLandingPage.colors.neutral.white};
 
   font-weight: 700;
   font-size: 13.7px;
