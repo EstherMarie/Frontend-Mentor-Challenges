@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-interface StyledMenuProps {
+interface StyledHeaderProps {
   isNavMenuActive: boolean
 }
 
-export const Header = styled.header<StyledMenuProps>`
+export const Header = styled.header<StyledHeaderProps>`
   width: 100%;
   min-height: 59px;
   padding: 20px 0;
@@ -79,7 +79,10 @@ export const NavMenu = styled.nav`
         color: ${({theme})=> theme.easybankLandingPage.colors.neutral.grayishBlue};
         font-size: 14px;
 
-        &:hover {
+        transition: all .2s ease-in-out;
+
+        &:hover,
+        &:focus {
           color: black;
 
           &::after {
