@@ -9,7 +9,7 @@ export const Header = styled.header<StyledHeaderProps>`
   min-height: 59px;
   padding: 20px 0;
   position: relative;
-  background-color: white;
+  background-color: ${({theme}) => theme.easybankLandingPage.colors.neutral.white};
   box-shadow: ${({isNavMenuActive}) => isNavMenuActive && window.innerWidth < 768 ? '0px 10px 250px 450px rgba(45, 49, 77, 0.4)' : ''} ;
 
   .menu-btn {
@@ -42,7 +42,7 @@ export const NavMenu = styled.nav`
   position: absolute;
   top: 88px;
   
-  background-color: white;
+  background-color: ${({theme}) => theme.easybankLandingPage.colors.neutral.white};
   border-radius: 5px;
 
   ul {
@@ -53,7 +53,7 @@ export const NavMenu = styled.nav`
     gap: 20px;
 
     & > li {
-      font-weight: 400;
+      font-weight: ${({ theme }) => theme.easybankLandingPage.typography.fontWeight.regular};
       font-size: 18px;
       line-height: 21px;
 
@@ -83,7 +83,7 @@ export const NavMenu = styled.nav`
 
         &:hover,
         &:focus {
-          color: black;
+          color: ${({theme})=> theme.easybankLandingPage.colors.primary.darkBlue};
 
           &::after {
             content: '';
@@ -94,7 +94,7 @@ export const NavMenu = styled.nav`
             display: block;
             width: 100%;
             height: 4px;
-            background: linear-gradient(89.64deg, #33D35E 0.97%, #2AB6D9 100%);
+            background: linear-gradient(89.64deg, ${({theme}) => theme.easybankLandingPage.colors.primary.limeGreen} 0.97%, ${({theme}) => theme.easybankLandingPage.colors.primary.brightCyan} 100%);
           }
         }
       }}
