@@ -2,17 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import * as S from './Card.styled';
 import { Container } from '../Container';
-
-interface ApiData {
-  slip: {
-    id: number;
-    advice: string;
-  };
-}
+import { ApiData } from '../../../types/AdviceApiData';
 
 export default function Card() {
   const [data, setData] = useState<ApiData>({
-    slip: { id: 1, advice: 'Loading Advice...' },
+    slip: { id: 0, advice: 'Loading Advice...' },
   });
 
   useEffect(() => {
