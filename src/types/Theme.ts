@@ -8,7 +8,7 @@ export interface ProjectTheme {
     };
   };
   typography: {
-    fontSize: string;
+    fontSize?: string;
     fontFamily: string;
     fontWeight: number | { [index: string]: number };
   };
