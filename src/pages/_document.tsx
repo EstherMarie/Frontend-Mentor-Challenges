@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
             href="/favicon-32x32.png"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&family=Public+Sans:wght@300;400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&family=Public+Sans:wght@300;400;700&family=Barlow:wght@300;400&display=swap"
             rel="stylesheet"
           />
         </Head>
