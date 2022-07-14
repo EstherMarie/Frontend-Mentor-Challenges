@@ -7,28 +7,33 @@ import EasybankLandingPage from '../pages/easybank-landing-page';
 
 import { ThemeProvider } from 'styled-components';
 import { Themes } from '../styles/themes';
+import { ApiData } from '../types/AdviceApiData';
 
 expect.extend(toHaveNoViolations);
 
 describe('should not have any accessibility violations', () => {
-  test('tests Home', async () => {
+  test('test Home', async () => {
     const { container } = render(<Home />);
     const results = await axe(container);
     expect(results).toHaveNoViolations();
   });
 
-  // FIXME: ReferenceError: fetch is not defined
-  // Solution: node-fetch?? axios?
+  global.fetch = jest.fn(() =>
+    Promise.resolve({
+      json: () =>
+        Promise.resolve<ApiData>({ slip: { id: 0, advice: 'Advice' } }),
+    }),
+  ) as jest.Mock;
 
-  // test("test Advice Generator App", async () => {
-  //   const { container } = render(
-  //     <ThemeProvider theme={Themes}>
-  //       <AdviceGeneratorApp />
-  //     </ThemeProvider>
-  //   );
-  //   const results = await axe(container);
-  //   expect(results).toHaveNoViolations();
-  // });
+  test('test Advice Generator App', async () => {
+    const { container } = render(
+      <ThemeProvider theme={Themes}>
+        <AdviceGeneratorApp />
+      </ThemeProvider>,
+    );
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
 
   test('test Easybank Landing Page', async () => {
     const { container } = render(
