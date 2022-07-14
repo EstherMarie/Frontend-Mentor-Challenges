@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Header } from '../components/easybank/Header';
 
-export default function AdviceGeneratorApp() {
+export default function EasybankLandingPage() {
   return (
     <>
       <Head>

@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1 className='sr-only'>Frontend Mentor Challenges</h1>
+        <h1>Frontend Mentor Challenges</h1>
         <ul>
           <li>
             <Link href='/advice-generator-app'>

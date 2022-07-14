@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 
-export const Header = styled.header`
+interface StyledHeaderProps {
+  isNavMenuActive: boolean
+}
+
+export const Header = styled.header<StyledHeaderProps>`
   width: 100%;
   min-height: 59px;
   padding: 20px 0;
   position: relative;
+  background-color: ${({theme}) => theme.easybankLandingPage.colors.neutral.white};
+  box-shadow: ${({isNavMenuActive}) => isNavMenuActive && window.innerWidth < 768 ? '0px 10px 250px 450px rgba(45, 49, 77, 0.4)' : ''} ;
 
   .menu-btn {
     background-color: transparent;
@@ -30,12 +36,13 @@ export const Header = styled.header`
 `;
 
 export const NavMenu = styled.nav`
-  width: 100%;
-  background-color: white;
-
+  width: calc(100% - 44px);
+  padding: 32px 0;
+  
   position: absolute;
   top: 88px;
-
+  
+  background-color: ${({theme}) => theme.easybankLandingPage.colors.neutral.white};
   border-radius: 5px;
 
   ul {
@@ -46,12 +53,12 @@ export const NavMenu = styled.nav`
     gap: 20px;
 
     & > li {
-      font-weight: 400;
+      font-weight: ${({ theme }) => theme.easybankLandingPage.typography.fontWeight.regular};
       font-size: 18px;
       line-height: 21px;
 
       & > a {
-        color: #000000;
+        color: ${({theme}) => theme.easybankLandingPage.colors.primary.darkBlue};
       }
     }
   }
@@ -59,15 +66,38 @@ export const NavMenu = styled.nav`
   @media (min-width: 768px) {
     position: unset;
     width: fit-content;
+    padding: unset;
 
     & > ul {
       flex-direction: row;
       gap: 28px;
 
-      & > li a {
-        color: #9c9c9c;
+      & > li {
+        position: relative;
+
+        & > a {
+        color: ${({theme})=> theme.easybankLandingPage.colors.neutral.grayishBlue};
         font-size: 14px;
-      }
+
+        transition: all .2s ease-in-out;
+
+        &:hover,
+        &:focus {
+          color: ${({theme})=> theme.easybankLandingPage.colors.primary.darkBlue};
+
+          &::after {
+            content: '';
+            
+            position: absolute;
+            bottom: -27px;
+
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(89.64deg, ${({theme}) => theme.easybankLandingPage.colors.primary.limeGreen} 0.97%, ${({theme}) => theme.easybankLandingPage.colors.primary.brightCyan} 100%);
+          }
+        }
+      }}
     }
   }
 `;
