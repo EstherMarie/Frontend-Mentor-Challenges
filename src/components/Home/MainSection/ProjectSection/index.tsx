@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from "next/link";
+import * as S from "./ProjectSection.styled";
 
 export function ProjectSection() {
   return (
-    <section>
+    <S.ProjectSection>
       <h2>Projects</h2>
       <div>
         <ul>
@@ -17,6 +18,6 @@ export function ProjectSection() {
           </li>
         </ul>
       </div>
-    </section>
+    </S.ProjectSection>
   );
 }
