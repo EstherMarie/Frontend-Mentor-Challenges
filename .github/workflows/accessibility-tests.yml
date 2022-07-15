@@ -2,11 +2,7 @@ name: Accessibility Tests
 
 # From Adrian Bolonio's article: https://www.adrianbolonio.com/en/accessibility-github-actions/
 
-on:
-  push:
-    branches: ['main', 'dev']
-  pull_request:
-    branches: ['main']
+on: [push, pull_request]
 
 jobs:
   build:
