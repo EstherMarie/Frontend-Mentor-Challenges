@@ -1,4 +1,4 @@
-name: Accessibility Tests
+name: Unit Tests
 
 # From Adrian Bolonio's article: https://www.adrianbolonio.com/en/accessibility-github-actions/
 
@@ -22,7 +22,3 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
-      - name: Run axe
-        run: |
-          npm install --location=global @axe-core/cli
-          axe http://localhost:3000 --disable color-contrast --exit
