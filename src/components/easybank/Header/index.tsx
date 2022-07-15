@@ -4,8 +4,6 @@ import Image from 'next/image';
 import * as S from './Header.styled';
 import { Container } from '../Container/Container.styled';
 
-import iconHamburger from '../../../../public/images/easybank-landing-page/icon-hamburger.svg';
-import iconClose from '../../../../public/images/easybank-landing-page/icon-close.svg';
 import { CallToAction } from '../CallToAction';
 
 export function Header() {
@@ -60,8 +58,13 @@ export function Header() {
 
         <button className="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <Image
-            src={isMenuOpen ? iconClose : iconHamburger}
+            src={
+              isMenuOpen
+                ? '/images/easybank-landing-page/icon-close.svg'
+                : '/images/easybank-landing-page/icon-hamburger.svg'
+            }
             alt={isMenuOpen ? 'Close menu' : 'Open menu'}
+            layout="fill"
           />
         </button>
 
