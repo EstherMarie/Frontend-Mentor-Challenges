@@ -1,12 +1,14 @@
 # Frontend-Mentor-Challenges
 
-## 🚧 In Progress:
+## ✅ Done:
+- [Advice Generator App](https://www.frontendmentor.io/solutions/advice-generator-app-with-react-typescript-nextjs-and-fetch-api-Nf-TFbfKub) | [Readme](https://github.com/EstherMarie/Frontend-Mentor-Challenges/wiki/Advice-Generator-App)
 
-- [Advice Generator App](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db)
+## 🚧 In progress:
 - [Easybank landing page](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN)
 
 ## 🚀 Tech Stack
 
 - React
 - TypeScript
-- Sass
+- Next.js
+- Styled Components
