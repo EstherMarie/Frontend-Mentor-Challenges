@@ -4,6 +4,10 @@ interface StyledHeaderProps {
   isNavMenuActive: boolean
 }
 
+interface StyledNavProps {
+  isNavShowing: boolean
+}
+
 export const Header = styled.header<StyledHeaderProps>`
   width: 100%;
   min-height: 59px;
@@ -26,7 +30,7 @@ export const Header = styled.header<StyledHeaderProps>`
     }
   }
 
-  .btn-cta {
+  .cta-button {
     display: none;
 
     @media (min-width: 768px) {
@@ -35,9 +39,10 @@ export const Header = styled.header<StyledHeaderProps>`
   }
 `;
 
-export const NavMenu = styled.nav`
+export const NavMenu = styled.nav<StyledNavProps>`
   width: calc(100% - 44px);
   padding: 32px 0;
+  display: ${({isNavShowing}) => isNavShowing ? 'block' : 'none'};
   
   position: absolute;
   top: 88px;
@@ -67,6 +72,8 @@ export const NavMenu = styled.nav`
     position: unset;
     width: fit-content;
     padding: unset;
+
+    display: flex;
 
     & > ul {
       flex-direction: row;
