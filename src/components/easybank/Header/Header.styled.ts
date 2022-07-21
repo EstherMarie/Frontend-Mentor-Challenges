@@ -13,8 +13,9 @@ export const Header = styled.header<StyledHeaderProps>`
   min-height: 59px;
   padding: 20px 0;
   position: relative;
+  z-index: 100;
   background-color: ${({theme}) => theme.easybankLandingPage.colors.neutral.white};
-  box-shadow: ${({isNavMenuActive}) => isNavMenuActive && window.innerWidth < 768 ? '0px 10px 250px 450px rgba(45, 49, 77, 0.4)' : ''} ;
+  box-shadow: ${({isNavMenuActive}) => isNavMenuActive && window.innerWidth < 768 ? '0px 10px 250px 450px rgba(45, 49, 77, 0.69)' : ''} ;
 
   .menu-btn {
     background-color: transparent;
