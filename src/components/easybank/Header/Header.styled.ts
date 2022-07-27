@@ -110,7 +110,7 @@ export const NavMenu = styled.nav<StyledNavProps>`
               content: '';
 
               position: absolute;
-              bottom: -27px;
+              bottom: -31px;
 
               display: block;
               width: 100%;
