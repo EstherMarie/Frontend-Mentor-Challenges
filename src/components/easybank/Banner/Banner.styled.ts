@@ -7,17 +7,21 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  padding-bottom: 80px;
+
+  background-color: ${({ theme }) =>
+    theme.easybankLandingPage.colors.neutral.veryLightGray};
+
   @media (min-width: 992px) {
     flex-direction: row-reverse;
 
     position: relative;
+    padding-bottom: 0;
+    overflow-y: unset;
   }
 `;
 
 export const Banner = styled.section`
-  background-color: ${({ theme }) =>
-    theme.easybankLandingPage.colors.neutral.veryLightGray};
-
   .img-section {
     background-image: url('/images/easybank-landing-page/bg-intro-mobile.svg');
     background-size: cover;
@@ -90,7 +94,8 @@ export const Banner = styled.section`
   @media (min-width: 992px) {
     min-height: 736px;
     display: flex;
-    overflow-x: hidden;
+    /* overflow-x: visible;
+    overflow-y: unset; */
 
     .img-section {
       background-image: url('/images/easybank-landing-page/bg-intro-desktop.svg');
@@ -102,6 +107,8 @@ export const Banner = styled.section`
       right: 0;
       top: -150px;
       background-size: cover;
+
+      overflow-x: clip;
 
       &__hero {
         max-width: 767px;
@@ -142,7 +149,7 @@ export const Banner = styled.section`
       &__hero {
         width: unset;
         height: 939px;
-        right: -8vw;
+        right: -7vw;
       }
     }
   }
