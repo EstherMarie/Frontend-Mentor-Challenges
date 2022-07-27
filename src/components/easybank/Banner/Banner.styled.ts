@@ -7,8 +7,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     flex-direction: row-reverse;
+
+    position: relative;
   }
 `;
 
@@ -81,6 +83,54 @@ export const Banner = styled.section`
       & > h1,
       & > p {
         width: unset;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    min-height: 736px;
+    display: flex;
+    overflow-x: hidden;
+
+    .img-section {
+      background-image: url('/images/easybank-landing-page/bg-intro-desktop.svg');
+      height: 956px;
+
+      position: absolute;
+
+      width: 56.9vw;
+      right: 0;
+      top: -150px;
+      background-size: cover;
+
+      &__hero {
+        max-width: 767px;
+        width: unset;
+        height: 939px;
+        position: absolute;
+        top: 112px;
+        right: -8vw;
+      }
+    }
+
+    .title-section {
+      text-align: left;
+      align-items: flex-start;
+
+      & > h1 {
+        font-size: 53.5px;
+        line-height: 63px;
+        width: 451px;
+      }
+
+      & > p {
+        width: 450px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.012em;
+
+        margin-bottom: 32px;
       }
     }
   }
