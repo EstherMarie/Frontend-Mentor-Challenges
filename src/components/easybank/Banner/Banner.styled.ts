@@ -105,11 +105,13 @@ export const Banner = styled.section`
 
       &__hero {
         max-width: 767px;
-        width: unset;
-        height: 939px;
+
         position: absolute;
         top: 112px;
-        right: -8vw;
+        right: -13vw;
+
+        width: 635px;
+        height: 815px;
       }
     }
 
@@ -131,6 +133,16 @@ export const Banner = styled.section`
         letter-spacing: -0.012em;
 
         margin-bottom: 32px;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .img-section {
+      &__hero {
+        width: unset;
+        height: 939px;
+        right: -8vw;
       }
     }
   }
