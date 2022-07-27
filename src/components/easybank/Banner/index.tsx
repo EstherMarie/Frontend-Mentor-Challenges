@@ -6,16 +6,19 @@ import Image from 'next/image';
 export function Banner() {
   return (
     <S.Banner className="banner">
-      <Container>
-        <S.Content>
-          <div className="banner__img-section">
+      <S.Wrapper>
+        <div className="img-section">
+          <div className="img-section__hero">
             <Image
-              src="/images/easybank-landing-page/bg-mobile.png"
+              src="/images/easybank-landing-page/image-mockups.png"
               alt=""
               layout="fill"
+              objectFit="cover"
             />
           </div>
-          <div className="banner__title-section">
+        </div>
+        <Container>
+          <div className="title-section">
             <h1>Next generation digital banking</h1>
             <p>
               Take your financial life online. Your Easybank account will be a
@@ -24,8 +27,8 @@ export function Banner() {
             </p>
             <CallToAction />
           </div>
-        </S.Content>
-      </Container>
+        </Container>
+      </S.Wrapper>
     </S.Banner>
   );
 }
