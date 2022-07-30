@@ -1,11 +1,14 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Article = styled.article`
   width: 100%;
   height: 387px;
-  background-color: ${({ theme }) => theme.easybankLandingPage.colors.neutral.white};
+  background-color: ${({ theme }) =>
+    theme.easybankLandingPage.colors.neutral.white};
   padding-bottom: 35.22px;
   border-radius: 5px;
+  box-shadow: 0 10px 20px
+    ${({ theme }) => theme.easybankLandingPage.colors.neutral.lightGrayishBlue};
 
   .article_header {
     width: 100%;
@@ -13,7 +16,7 @@ export const Article = styled.article`
     position: relative;
 
     margin-bottom: 26px;
-    
+
     img {
       border-radius: 5px 5px 0px 0px;
     }
@@ -22,31 +25,24 @@ export const Article = styled.article`
   .article_body {
     padding-inline: 28.5px;
 
-    .article_author{
+    .article_author {
       font-size: 9px;
       color: hsla(0, 0%, 61%, 1);
     }
 
     .article_title {
-      font-weight: ${({ theme }) => theme.easybankLandingPage.typography.fontWeight.light};
+      color: ${({ theme }) =>
+        theme.easybankLandingPage.colors.primary.darkBlue};
+      text-decoration: none;
+      font-weight: ${({ theme }) =>
+        theme.easybankLandingPage.typography.fontWeight.light};
       font-size: 14.25px;
-      line-height: 19px;;
+      line-height: 19px;
       margin-top: 11px;
       margin-bottom: 8px;
-      
-      a {
-        color: ${({ theme }) => theme.easybankLandingPage.colors.primary.darkBlue};
-        text-decoration: none;
-        
-        &:hover,
-        &:focus {
-          color: ${({ theme }) => theme.easybankLandingPage.colors.primary.neonGreen};
-        }
-      }
     }
 
-
-    .article_text{
+    .article_text {
       font-size: 12px;
       line-height: 16px;
       color: hsla(0, 0%, 61%, 1);
@@ -56,10 +52,10 @@ export const Article = styled.article`
   @media (min-width: 768px) {
     max-width: 255px;
 
-    .article_author{
+    .article_author {
       font-size: 10px;
     }
-    
+
     .article_body {
       padding-inline: 18px;
 
@@ -76,4 +72,12 @@ export const Article = styled.article`
       }
     }
   }
-`
+
+  &:hover,
+  &:focus {
+    .article_title {
+      color: ${({ theme }) =>
+        theme.easybankLandingPage.colors.primary.limeGreen};
+    }
+  }
+`;
