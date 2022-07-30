@@ -22,7 +22,15 @@ export function Article({ image, author, title, text }: ArticleProps) {
 
       <div className="article_body">
         <p className='article_author'>By {author}</p>
-        <h3 className='article_title'>{title}</h3>
+
+
+        <h3 className='article_title'>
+          <a href="#articles">
+            {title}
+          </a>
+        </h3>
+
+
         <p className='article_text'>{text}</p>
       </div>
     </S.Article>

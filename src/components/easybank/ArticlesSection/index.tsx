@@ -8,7 +8,7 @@ export function ArticlesSection() {
     <S.ArticlesSection>
       <Container>
         <S.Wrapper>
-          <h2>Latest Articles</h2>
+          <h2 id='articles'>Latest Articles</h2>
 
           <div className="displayArticles">
             {articleList.map((article, index) => {

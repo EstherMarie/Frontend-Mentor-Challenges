@@ -27,13 +27,24 @@ export const Article = styled.article`
       color: hsla(0, 0%, 61%, 1);
     }
 
-    .article_title{
+    .article_title {
       font-weight: ${({ theme }) => theme.easybankLandingPage.typography.fontWeight.light};
       font-size: 14.25px;
       line-height: 19px;;
       margin-top: 11px;
       margin-bottom: 8px;
+      
+      a {
+        color: ${({ theme }) => theme.easybankLandingPage.colors.primary.darkBlue};
+        text-decoration: none;
+        
+        &:hover,
+        &:focus {
+          color: ${({ theme }) => theme.easybankLandingPage.colors.primary.neonGreen};
+        }
+      }
     }
+
 
     .article_text{
       font-size: 12px;
