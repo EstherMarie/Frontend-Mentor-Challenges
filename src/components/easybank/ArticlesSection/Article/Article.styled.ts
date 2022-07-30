@@ -23,10 +23,10 @@ export const Article = styled.article`
   }
 
   .article_body {
-    padding-inline: 28.5px;
+    padding-inline: 25px;
 
     .article_author {
-      font-size: 9px;
+      font-size: 12px;
       color: hsla(0, 0%, 61%, 1);
     }
 
