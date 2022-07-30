@@ -40,11 +40,6 @@ export const WhyEasybank = styled.section`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
-    article {
-      max-width: 310px;
-      width: 100%;
-    }
   }
 
   @media (min-width: 768px) {
@@ -86,10 +81,6 @@ export const WhyEasybank = styled.section`
   @media (min-width: 1200px) {
     .card_section {
       flex-wrap: nowrap;
-
-      article {
-        min-width: 260px;
-      }
     }
   }
 `

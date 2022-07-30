@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const Card = styled.article`
+  max-width: 310px;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +31,7 @@ export const Card = styled.article`
   }
 
   @media (min-width: 992px) {
+    max-width: 260px;
     text-align: left;
     align-items: flex-start;
     gap: unset;
@@ -43,6 +47,7 @@ export const Card = styled.article`
     p {
       font-size: 16px;
       line-height: 26px;
+      letter-spacing: -0.4px;
     }
   }
 `

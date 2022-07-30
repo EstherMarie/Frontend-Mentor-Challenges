@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Banner } from '../components/easybank/Banner';
 import { Header } from '../components/easybank/Header';
 import { WhyEasybank } from '../components/easybank/WhyEasybank';
+import { ArticlesSection } from '../components/easybank/ArticlesSection';
 
 export default function EasybankLandingPage() {
   return (
@@ -17,6 +18,7 @@ export default function EasybankLandingPage() {
       <main>
         <Banner />
         <WhyEasybank />
+        <ArticlesSection />
       </main>
     </>
   );
