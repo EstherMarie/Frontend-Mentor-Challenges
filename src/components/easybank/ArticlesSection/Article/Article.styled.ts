@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Article = styled.article`
   width: 100%;
   height: 387px;
+  margin-inline: auto;
+
   background-color: ${({ theme }) =>
     theme.easybankLandingPage.colors.neutral.white};
   padding-bottom: 35.22px;

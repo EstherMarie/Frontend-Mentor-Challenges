@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Card = styled.article`
   max-width: 310px;
   width: 100%;
+  margin-inline: auto;
 
   display: flex;
   flex-direction: column;
@@ -14,20 +15,19 @@ export const Card = styled.article`
 
   h3 {
     font-weight: ${({ theme }) =>
-      theme.easybankLandingPage.typography.fontWeight.light};    
-    color: ${({ theme }) =>
-        theme.easybankLandingPage.colors.primary.darkBlue};
+      theme.easybankLandingPage.typography.fontWeight.light};
+    color: ${({ theme }) => theme.easybankLandingPage.colors.primary.darkBlue};
     font-size: 18px;
     line-height: 21px;
   }
 
   p {
     font-weight: ${({ theme }) =>
-      theme.easybankLandingPage.typography.fontWeight.regular};    
+      theme.easybankLandingPage.typography.fontWeight.regular};
     color: ${({ theme }) =>
       theme.easybankLandingPage.colors.neutral.grayishBlue};
-      font-size: 14px;
-      line-height: 23px;
+    font-size: 14px;
+    line-height: 23px;
   }
 
   @media (min-width: 992px) {
@@ -50,4 +50,4 @@ export const Card = styled.article`
       letter-spacing: -0.4px;
     }
   }
-`
+`;

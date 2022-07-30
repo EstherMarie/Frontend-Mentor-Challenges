@@ -1,5 +1,6 @@
 import * as S from './WhyEasybank.styled';
 import { Container } from '../Container';
+import { CardGrid } from '../CardGrid/CardGrid.styled';
 import { Card } from './Card';
 import { useId } from 'react';
 
@@ -15,7 +16,7 @@ export function WhyEasybank() {
               financial hub. Control your finances like never before.
             </p>
           </div>
-          <div className="card_section">
+          <CardGrid>
             {cardList.map(({ icon, title, text }, index) => (
               <Card
                 key={`${useId}-${index}`}
@@ -24,7 +25,7 @@ export function WhyEasybank() {
                 text={text}
               />
             ))}
-          </div>
+          </CardGrid>
         </S.Wrapper>
       </Container>
     </S.WhyEasybank>

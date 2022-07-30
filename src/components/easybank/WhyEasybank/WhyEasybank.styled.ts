@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const WhyEasybank = styled.section`
-  background-color: ${({theme}) => theme.easybankLandingPage.colors.neutral.lightGrayishBlue};
+  background-color: ${({ theme }) =>
+    theme.easybankLandingPage.colors.neutral.lightGrayishBlue};
   padding: 61px 0 63px;
 
   .content {
@@ -16,7 +17,7 @@ export const WhyEasybank = styled.section`
 
     h2 {
       font-weight: ${({ theme }) =>
-      theme.easybankLandingPage.typography.fontWeight.light};
+        theme.easybankLandingPage.typography.fontWeight.light};
       font-size: 28px;
       line-height: 33px;
       color: ${({ theme }) =>
@@ -35,20 +36,6 @@ export const WhyEasybank = styled.section`
     }
   }
 
-  .card_section {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @media (min-width: 768px) {
-    .card_section {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }  
-  }
- 
   @media (min-width: 992px) {
     padding: 93px 0 102px;
 
@@ -69,22 +56,9 @@ export const WhyEasybank = styled.section`
         width: 682px;
       }
     }
-
-    .card_section {
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 25px;
-      
-    }
   }
-
-  @media (min-width: 1200px) {
-    .card_section {
-      flex-wrap: nowrap;
-    }
-  }
-`
+`;
 
 export const Wrapper = styled.div`
   width: 100%;
-`
+`;
