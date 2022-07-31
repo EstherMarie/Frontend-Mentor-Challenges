@@ -18,7 +18,7 @@ export function Footer() {
 
             <ul className="footer_social">
               <li>
-                <a href="#footer" target="_blank" rel="noopener noreferrer">
+                <a href="#footer" rel="noopener noreferrer">
                   <Image
                     src="/images/easybank-landing-page/icon-facebook.svg"
                     alt="Facebook"
@@ -28,7 +28,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#footer" target="_blank" rel="noopener noreferrer">
+                <a href="#footer" rel="noopener noreferrer">
                   <Image
                     src="/images/easybank-landing-page/icon-youtube.svg"
                     alt="YouTube"
@@ -38,7 +38,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#footer" target="_blank" rel="noopener noreferrer">
+                <a href="#footer" rel="noopener noreferrer">
                   <Image
                     src="/images/easybank-landing-page/icon-twitter.svg"
                     alt="Twitter"
@@ -48,7 +48,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#footer" target="_blank" rel="noopener noreferrer">
+                <a href="#footer" rel="noopener noreferrer">
                   <Image
                     src="/images/easybank-landing-page/icon-pinterest.svg"
                     alt="Pinterest"
@@ -58,7 +58,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#footer" target="_blank" rel="noopener noreferrer">
+                <a href="#footer" rel="noopener noreferrer">
                   <Image
                     src="/images/easybank-landing-page/icon-instagram.svg"
                     alt="Instagram"
@@ -72,32 +72,32 @@ export function Footer() {
 
           <ul className="footer_menu">
             <li>
-              <a href="#footer" target="_blank" rel="noopener noreferrer">
+              <a href="#footer" rel="noopener noreferrer">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#footer" target="_blank" rel="noopener noreferrer">
+              <a href="#footer" rel="noopener noreferrer">
                 Contact
               </a>
             </li>
             <li>
-              <a href="#footer" target="_blank" rel="noopener noreferrer">
+              <a href="#footer" rel="noopener noreferrer">
                 Blog
               </a>
             </li>
             <li>
-              <a href="#footer" target="_blank" rel="noopener noreferrer">
+              <a href="#footer" rel="noopener noreferrer">
                 Carrers
               </a>
             </li>
             <li>
-              <a href="#footer" target="_blank" rel="noopener noreferrer">
+              <a href="#footer" rel="noopener noreferrer">
                 Support
               </a>
             </li>
             <li>
-              <a href="#footer" target="_blank" rel="noopener noreferrer">
+              <a href="#footer" rel="noopener noreferrer">
                 Privacy Policy
               </a>
             </li>

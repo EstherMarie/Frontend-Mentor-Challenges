@@ -20,7 +20,7 @@ export const Footer = styled.footer`
 
   @media (min-width: 768px) {
     height: 191px;
-    /* padding: 50px 0; */
+    padding: 50px 0;
   }
 `;
 
@@ -65,28 +65,56 @@ export const Wrapper = styled.div`
 
     li {
       a {
-        display: block;
         height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 
     @media (min-width: 768px) {
+      margin: unset;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      /* grid-template-columns: repeat(2, 1fr); */
+      column-gap: 10rem;
+
+      li {
+        a {
+          justify-content: flex-start;
+        }
+
+        &:nth-child(4) {
+          grid-column-start: 2;
+        }
+      }
+    }
+
+    @media (min-width: 1200px) {
+      column-gap: 125px;
     }
   }
 
   .footer_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .footer_rights {
       margin-top: 23px;
+      font-size: 13.56px;
+      font-weight: ${({ theme }) =>
+        theme.easybankLandingPage.typography.fontWeight.light};
 
       color: hsla(0, 0%, 61%, 1);
     }
 
     @media (min-width: 768px) {
-      display: flex;
-      flex-direction: column;
+      align-items: flex-end;
       justify-content: space-between;
+
+      .footer_rights {
+        font-size: 14.5px;
+      }
     }
   }
 `;
