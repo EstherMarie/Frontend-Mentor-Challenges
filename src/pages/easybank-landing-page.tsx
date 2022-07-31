@@ -3,6 +3,7 @@ import { Banner } from '../components/easybank/Banner';
 import { Header } from '../components/easybank/Header';
 import { WhyEasybank } from '../components/easybank/WhyEasybank';
 import { ArticlesSection } from '../components/easybank/ArticlesSection';
+import { Footer } from '../components/easybank/Footer';
 
 export default function EasybankLandingPage() {
   return (
@@ -20,6 +21,7 @@ export default function EasybankLandingPage() {
         <WhyEasybank />
         <ArticlesSection />
       </main>
+      <Footer />
     </>
   );
 }
