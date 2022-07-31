@@ -2,7 +2,7 @@ name: Unit Tests
 
 # From Adrian Bolonio's article: https://www.adrianbolonio.com/en/accessibility-github-actions/
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:

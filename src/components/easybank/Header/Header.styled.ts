@@ -1,16 +1,29 @@
 import styled from 'styled-components';
 
 interface StyledHeaderProps {
-  isNavMenuActive: boolean
+  isNavMenuActive: boolean;
+}
+
+interface StyledNavProps {
+  isNavShowing: boolean;
 }
 
 export const Header = styled.header<StyledHeaderProps>`
   width: 100%;
   min-height: 59px;
   padding: 20px 0;
-  position: relative;
-  background-color: ${({theme}) => theme.easybankLandingPage.colors.neutral.white};
-  box-shadow: ${({isNavMenuActive}) => isNavMenuActive && window.innerWidth < 768 ? '0px 10px 250px 450px rgba(45, 49, 77, 0.4)' : ''} ;
+  position: fixed;
+  z-index: 100;
+  background-color: ${({ theme }) =>
+    theme.easybankLandingPage.colors.neutral.white};
+  box-shadow: ${({ isNavMenuActive }) =>
+    isNavMenuActive && window.innerWidth < 768
+      ? '0px 10px 250px 450px rgba(45, 49, 77, 0.69)'
+      : ''};
+
+  & > div {
+    position: relative;
+  }
 
   .menu-btn {
     background-color: transparent;
@@ -26,7 +39,7 @@ export const Header = styled.header<StyledHeaderProps>`
     }
   }
 
-  .btn-cta {
+  .cta-button {
     display: none;
 
     @media (min-width: 768px) {
@@ -35,14 +48,16 @@ export const Header = styled.header<StyledHeaderProps>`
   }
 `;
 
-export const NavMenu = styled.nav`
+export const NavMenu = styled.nav<StyledNavProps>`
   width: calc(100% - 44px);
   padding: 32px 0;
-  
+  display: ${({ isNavShowing }) => (isNavShowing ? 'block' : 'none')};
+
   position: absolute;
   top: 88px;
-  
-  background-color: ${({theme}) => theme.easybankLandingPage.colors.neutral.white};
+
+  background-color: ${({ theme }) =>
+    theme.easybankLandingPage.colors.neutral.white};
   border-radius: 5px;
 
   ul {
@@ -53,12 +68,14 @@ export const NavMenu = styled.nav`
     gap: 20px;
 
     & > li {
-      font-weight: ${({ theme }) => theme.easybankLandingPage.typography.fontWeight.regular};
+      font-weight: ${({ theme }) =>
+        theme.easybankLandingPage.typography.fontWeight.regular};
       font-size: 18px;
       line-height: 21px;
 
       & > a {
-        color: ${({theme}) => theme.easybankLandingPage.colors.primary.darkBlue};
+        color: ${({ theme }) =>
+          theme.easybankLandingPage.colors.primary.darkBlue};
       }
     }
   }
@@ -68,6 +85,8 @@ export const NavMenu = styled.nav`
     width: fit-content;
     padding: unset;
 
+    display: flex;
+
     & > ul {
       flex-direction: row;
       gap: 28px;
@@ -76,28 +95,39 @@ export const NavMenu = styled.nav`
         position: relative;
 
         & > a {
-        color: ${({theme})=> theme.easybankLandingPage.colors.neutral.grayishBlue};
-        font-size: 14px;
+          color: ${({ theme }) =>
+            theme.easybankLandingPage.colors.neutral.grayishBlue};
+          font-size: 14px;
 
-        transition: all .2s ease-in-out;
+          transition: all 0.2s ease-in-out;
 
-        &:hover,
-        &:focus {
-          color: ${({theme})=> theme.easybankLandingPage.colors.primary.darkBlue};
+          &:hover,
+          &:focus {
+            color: ${({ theme }) =>
+              theme.easybankLandingPage.colors.primary.darkBlue};
 
-          &::after {
-            content: '';
-            
-            position: absolute;
-            bottom: -27px;
+            &::after {
+              content: '';
 
-            display: block;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(89.64deg, ${({theme}) => theme.easybankLandingPage.colors.primary.limeGreen} 0.97%, ${({theme}) => theme.easybankLandingPage.colors.primary.brightCyan} 100%);
+              position: absolute;
+              bottom: -31px;
+
+              display: block;
+              width: 100%;
+              height: 4px;
+              background: linear-gradient(
+                89.64deg,
+                ${({ theme }) =>
+                    theme.easybankLandingPage.colors.primary.limeGreen}
+                  0.97%,
+                ${({ theme }) =>
+                    theme.easybankLandingPage.colors.primary.brightCyan}
+                  100%
+              );
+            }
           }
         }
-      }}
+      }
     }
   }
 `;

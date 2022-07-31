@@ -52,7 +52,7 @@ export const Themes: Themes = {
       neutral: {
         grayishBlue: 'hsl(233, 7%, 48%)',
         lightGrayishBlue: 'hsl(220, 16%, 96%)',
-        veryLightGray: 'hsl(0, 0%, 98%)',
+        veryLightGray: 'hsl(0, 0%, 99%)',
         white: 'hsl(0, 0%, 100%)',
       },
     },

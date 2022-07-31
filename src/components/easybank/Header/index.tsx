@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import * as S from './Header.styled';
 import { Container } from '../Container/Container.styled';
@@ -7,25 +7,10 @@ import { Container } from '../Container/Container.styled';
 import { CallToAction } from '../CallToAction';
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(true);
-
-  function checkWindowSize() {
-    if (window.innerWidth >= 768) {
-      setIsMenuOpen(true);
-      setIsMobile(false);
-    } else {
-      setIsMenuOpen(false);
-      setIsMobile(true);
-    }
-  }
-
-  useEffect(() => {
-    checkWindowSize();
-  }, []);
+  const [isNavVisible, setIsNavVisible] = useState(false);
 
   return (
-    <S.Header isNavMenuActive={isMenuOpen}>
+    <S.Header isNavMenuActive={isNavVisible}>
       <Container>
         <Image
           src="/images/easybank-landing-page/logo.svg"
@@ -34,41 +19,43 @@ export function Header() {
           height={20}
         />
 
-        {isMenuOpen && (
-          <S.NavMenu>
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Careers</a>
-              </li>
-            </ul>
-          </S.NavMenu>
-        )}
+        <S.NavMenu isNavShowing={isNavVisible}>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+          </ul>
+        </S.NavMenu>
 
-        <button className="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button
+          className="menu-btn"
+          onClick={() => setIsNavVisible(!isNavVisible)}
+        >
           <Image
             src={
-              isMenuOpen
+              isNavVisible
                 ? '/images/easybank-landing-page/icon-close.svg'
                 : '/images/easybank-landing-page/icon-hamburger.svg'
             }
-            alt={isMenuOpen ? 'Close menu' : 'Open menu'}
-            layout="fill"
+            alt={isNavVisible ? 'Close menu' : 'Open menu'}
+            width={19}
+            height={19}
           />
         </button>
 
-        {!isMobile && <CallToAction />}
+        <CallToAction />
       </Container>
     </S.Header>
   );
