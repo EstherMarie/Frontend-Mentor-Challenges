@@ -46,9 +46,13 @@ export const Wrapper = styled.div`
       display: flex;
       gap: 15px;
 
-      &:hover {
-        fill: ${({ theme }) =>
-          theme.easybankLandingPage.colors.primary.limeGreen};
+      .footer_social_icon:hover {
+        filter: 
+          invert(0.4)
+          sepia(0.5)
+          saturate(5.9)
+          hue-rotate(90deg)
+          brightness(1);
       }
     }
   }

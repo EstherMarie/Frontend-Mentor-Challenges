@@ -21,6 +21,7 @@ export function Footer() {
                 <a href="#footer" rel="noopener noreferrer">
                   <Image
                     src="/images/easybank-landing-page/icon-facebook.svg"
+                    className='footer_social_icon'
                     alt="Facebook"
                     width={20}
                     height={20}
@@ -31,6 +32,7 @@ export function Footer() {
                 <a href="#footer" rel="noopener noreferrer">
                   <Image
                     src="/images/easybank-landing-page/icon-youtube.svg"
+                    className='footer_social_icon'
                     alt="YouTube"
                     width={20}
                     height={20}
@@ -41,6 +43,7 @@ export function Footer() {
                 <a href="#footer" rel="noopener noreferrer">
                   <Image
                     src="/images/easybank-landing-page/icon-twitter.svg"
+                    className='footer_social_icon'
                     alt="Twitter"
                     width={20}
                     height={20}
@@ -51,6 +54,7 @@ export function Footer() {
                 <a href="#footer" rel="noopener noreferrer">
                   <Image
                     src="/images/easybank-landing-page/icon-pinterest.svg"
+                    className='footer_social_icon'
                     alt="Pinterest"
                     width={20}
                     height={20}
@@ -61,6 +65,7 @@ export function Footer() {
                 <a href="#footer" rel="noopener noreferrer">
                   <Image
                     src="/images/easybank-landing-page/icon-instagram.svg"
+                    className='footer_social_icon'
                     alt="Instagram"
                     width={20}
                     height={20}
