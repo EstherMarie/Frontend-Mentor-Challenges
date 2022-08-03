@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { CardGrid } from '../CardGrid/CardGrid.styled';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -38,3 +39,7 @@ export const ArticlesSection = styled.section`
     }
   }
 `;
+
+export const ArticleGrid = styled(CardGrid)`
+  gap: 22px;
+`

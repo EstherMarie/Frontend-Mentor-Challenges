@@ -52,7 +52,7 @@ export const Article = styled.article`
   }
 
   @media (min-width: 768px) {
-    max-width: 255px;
+    max-width: 320px;
 
     .article_author {
       font-size: 10px;
@@ -73,6 +73,10 @@ export const Article = styled.article`
         letter-spacing: -0.015em;
       }
     }
+  }
+
+  @media (min-width: 1000px) {
+    max-width: 255px 
   }
 
   &:hover,

@@ -12,7 +12,7 @@ export function ArticlesSection() {
         <S.Wrapper>
           <h2 id="articles">Latest Articles</h2>
 
-          <CardGrid>
+          <S.ArticleGrid>
             {articleList.map((article, index) => {
               return (
                 <Article
@@ -24,7 +24,7 @@ export function ArticlesSection() {
                 />
               );
             })}
-          </CardGrid>
+          </S.ArticleGrid>
         </S.Wrapper>
       </Container>
     </S.ArticlesSection>
