@@ -14,6 +14,7 @@ export function Banner() {
               alt=""
               layout="fill"
               objectFit="cover"
+              priority
             />
           </div>
         </div>
