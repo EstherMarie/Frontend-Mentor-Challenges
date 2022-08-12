@@ -89,7 +89,7 @@ export const NavMenu = styled.nav<StyledNavProps>`
 
     & > ul {
       flex-direction: row;
-      gap: 28px;
+      gap: unset;
 
       & > li {
         position: relative;
@@ -98,6 +98,7 @@ export const NavMenu = styled.nav<StyledNavProps>`
           color: ${({ theme }) =>
             theme.easybankLandingPage.colors.neutral.grayishBlue};
           font-size: 14px;
+          padding: 33px 14px;
 
           transition: all 0.2s ease-in-out;
 
