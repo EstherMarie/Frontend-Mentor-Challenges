@@ -1,8 +1,6 @@
-name: Unit Tests
+name: Pa11y-CI
 
-# From Adrian Bolonio's article: https://www.adrianbolonio.com/en/accessibility-github-actions/
-
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
@@ -22,3 +20,8 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
+      - run: npm start & npx wait-on http://localhost:3000
+      - name: Run pa11y-ci
+        run: |
+          npm install --location=global pa11y-ci
+          pa11y-ci >> $GITHUB_STEP_SUMMARY
