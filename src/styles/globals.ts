@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-
   * {
     margin: 0;
     padding: 0;
@@ -10,8 +9,16 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-size: 62.5%;
+    font-size: 62.5%; // 1rem = 10px
     scroll-behavior: smooth;
+
+    /* @media (max-width: 1080px) {
+      font-size: 93.75%; // 1rem = 15px
+    }
+
+    @media (max-width: 720px) {
+      font-size: 87.5%; // 1rem = 14px
+    } */
   }
 
   .sr-only:not(:focus):not(:active) {
@@ -24,14 +31,17 @@ export const GlobalStyle = createGlobalStyle`
     width: 1px;
   }
 
-  @media (prefers-reduced-motion: reduce) {  
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
+  @media (prefers-reduced-motion: reduce) {
+    *, 
+    ::before, 
+    ::after {
+      animation-delay: -1ms !important;
+      animation-duration: 1ms !important;
       animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
+      background-attachment: initial !important;
       scroll-behavior: auto !important;
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
     }
   }
 
