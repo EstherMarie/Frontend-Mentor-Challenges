@@ -13,7 +13,7 @@ export const Themes: Themes = {
       },
       neutral: {
         white: '#FAFAFA',
-        EarieBlack: '#1c2022',
+        earieBlack: '#1c2022',
       },
     },
     typography: {
