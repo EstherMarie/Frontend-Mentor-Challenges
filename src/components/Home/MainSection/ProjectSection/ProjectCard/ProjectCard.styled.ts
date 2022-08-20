@@ -59,7 +59,7 @@ export const ProjectCard = styled.article`
     }
   
     p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       line-height: 1.4rem;
     }
 
@@ -72,7 +72,8 @@ export const ProjectCard = styled.article`
       height: 24px;
       width: fit-content;
 
-      
+      font-size: 1.4rem;
+
       border-radius: 5px;
       
       &.newbie {
