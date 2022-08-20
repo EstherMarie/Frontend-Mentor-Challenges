@@ -5,14 +5,14 @@ import { HomeMain } from '../components/Home/MainSection';
 
 const Home: NextPage = () => {
   return (
-    <div className="container">
+    <>
       <Head>
         <title>Frontend Mentor Challenges</title>
         <meta name="description" content="Projects from Frontend Mentor" />
       </Head>
 
       <HomeMain />
-    </div>
+    </>
   );
 };
 
