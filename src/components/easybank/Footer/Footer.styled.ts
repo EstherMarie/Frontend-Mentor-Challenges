@@ -33,25 +33,25 @@ export const Wrapper = styled.div`
   @media (min-width: 768px) {
     height: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 80px;
+  }
+
+  @media (min-width: 992px) {
+    gap: 110px;
   }
 
   .footer_info {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    align-items: flex-start;
+    gap: 50px;
 
     .footer_social {
       display: flex;
       gap: 15px;
 
       .footer_social_icon:hover {
-        filter: 
-          invert(0.4)
-          sepia(0.5)
-          saturate(5.9)
-          hue-rotate(90deg)
+        filter: invert(0.4) sepia(0.5) saturate(5.9) hue-rotate(90deg)
           brightness(1);
       }
     }
@@ -77,23 +77,25 @@ export const Wrapper = styled.div`
     }
 
     @media (min-width: 768px) {
+      height: 100px;
       margin: unset;
-      display: grid;
-      /* grid-template-columns: repeat(2, 1fr); */
-      column-gap: 10rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      column-gap: 8rem;
 
       li {
         a {
           justify-content: flex-start;
         }
 
-        &:nth-child(4) {
+        /* &:nth-child(4) {
           grid-column-start: 2;
-        }
+        } */
       }
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
       column-gap: 125px;
     }
   }
@@ -102,9 +104,10 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 23px;
 
     .footer_rights {
-      margin-top: 23px;
+      /* margin-top: 23px; */
       font-size: 13.56px;
       font-weight: ${({ theme }) =>
         theme.easybankLandingPage.typography.fontWeight.light};
@@ -115,6 +118,9 @@ export const Wrapper = styled.div`
     @media (min-width: 768px) {
       align-items: flex-end;
       justify-content: space-between;
+      gap: 28px;
+
+      margin-left: auto;
 
       .footer_rights {
         font-size: 14.5px;

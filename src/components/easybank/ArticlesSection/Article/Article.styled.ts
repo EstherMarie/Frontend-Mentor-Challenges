@@ -76,11 +76,13 @@ export const Article = styled.article`
   }
 
   @media (min-width: 1000px) {
-    max-width: 255px 
+    max-width: 255px;
   }
 
   &:hover,
   &:focus {
+    cursor: pointer;
+
     .article_title {
       color: ${({ theme }) =>
         theme.easybankLandingPage.colors.primary.limeGreen};
