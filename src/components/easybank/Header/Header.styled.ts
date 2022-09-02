@@ -23,6 +23,8 @@ export const Header = styled.header<StyledHeaderProps>`
 
   & > div {
     position: relative;
+    background-color: ${({ theme }) =>
+      theme.easybankLandingPage.colors.neutral.white};
   }
 
   .menu-btn {
@@ -51,14 +53,16 @@ export const Header = styled.header<StyledHeaderProps>`
 export const NavMenu = styled.nav<StyledNavProps>`
   width: calc(100% - 44px);
   padding: 32px 0;
-  display: ${({ isNavShowing }) => (isNavShowing ? 'block' : 'none')};
 
   position: absolute;
-  top: 88px;
+  top: ${({ isNavShowing }) => (isNavShowing ? '88px' : '-280px')};
+  z-index: -1;
 
   background-color: ${({ theme }) =>
     theme.easybankLandingPage.colors.neutral.white};
   border-radius: 5px;
+
+  transition: all 300ms ease-in-out;
 
   ul {
     display: flex;
@@ -73,6 +77,9 @@ export const NavMenu = styled.nav<StyledNavProps>`
       font-size: 18px;
       line-height: 21px;
 
+      filter: ${({ isNavShowing }) =>
+        isNavShowing ? 'opacity(1)' : 'opacity(0)'};
+
       & > a {
         color: ${({ theme }) =>
           theme.easybankLandingPage.colors.primary.darkBlue};
@@ -84,6 +91,7 @@ export const NavMenu = styled.nav<StyledNavProps>`
     position: unset;
     width: fit-content;
     padding: unset;
+    z-index: unset;
 
     display: flex;
 
@@ -93,6 +101,7 @@ export const NavMenu = styled.nav<StyledNavProps>`
 
       & > li {
         position: relative;
+        filter: opacity(1);
 
         & > a {
           color: ${({ theme }) =>
