@@ -4,24 +4,21 @@ interface Themes {
   [index: string]: ProjectTheme;
 }
 
-// TODO: create style guide for Homepage
 export const Themes: Themes = {
   home: {
     colors: {
       primary: {
-        lightCyan: 'hsl(193, 38%, 86%)',
-        neonGreen: 'hsl(150, 100%, 66%)',
+        babyPink: '#F9C7C5',
+        middleBlue: '#69BED0',
       },
       neutral: {
-        grayishBlue: 'hsl(217, 19%, 38%)',
-        darkGrayishBlue: 'hsl(217, 19%, 24%)',
-        darkBlue: 'hsl(218, 23%, 16%)',
+        white: '#FAFAFA',
+        earieBlack: '#1c2022',
       },
     },
     typography: {
-      fontSize: '2.8rem',
-      fontFamily: '"Manrope", sans-serif',
-      fontWeight: 800,
+      fontFamily: '"Barlow", sans-serif',
+      fontWeight: 400,
     },
   },
   adviceGeneratorApp: {

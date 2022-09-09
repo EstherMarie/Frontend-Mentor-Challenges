@@ -94,8 +94,6 @@ export const Banner = styled.section`
   @media (min-width: 992px) {
     min-height: 736px;
     display: flex;
-    /* overflow-x: visible;
-    overflow-y: unset; */
 
     .img-section {
       background-image: url('/images/easybank-landing-page/bg-intro-desktop.svg');
@@ -115,8 +113,7 @@ export const Banner = styled.section`
 
         position: absolute;
         top: 112px;
-        right: -13vw;
-
+        left: 11vw;
         width: 635px;
         height: 815px;
       }
@@ -149,7 +146,6 @@ export const Banner = styled.section`
       &__hero {
         width: unset;
         height: 939px;
-        right: -7vw;
       }
     }
   }
