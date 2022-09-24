@@ -9,7 +9,7 @@ export interface ProjectTheme {
   };
   typography: {
     fontSize?: string;
-    fontFamily: string;
+    fontFamily: string | { [index: string]: string };
     fontWeight: number | { [index: string]: number };
   };
 }
