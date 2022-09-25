@@ -1,7 +1,14 @@
 {
-    "urls": [
-        "http://localhost:3000/",
-        "http://localhost:3000/advice-generator-app",
-        "http://localhost:3000/easybank-landing-page"
+  "defaults": {
+    "ignore": [
+      "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18",
+      "WCAG2AA.Principle1.Guideline1_4.1_4_6.G18"
     ]
+  },
+  "urls": [
+    "http://localhost:3000/",
+    "http://localhost:3000/advice-generator-app",
+    "http://localhost:3000/easybank-landing-page",
+    "http://localhost:3000/sunnyside-landing-page"
+  ]
 }
