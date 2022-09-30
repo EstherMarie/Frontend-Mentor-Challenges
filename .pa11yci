@@ -1,8 +1,10 @@
 {
   "defaults": {
+    "runners": [
+      "axe"
+    ],
     "ignore": [
-      "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18",
-      "WCAG2AA.Principle1.Guideline1_4.1_4_6.G18"
+      "color-contrast"
     ]
   },
   "urls": [
