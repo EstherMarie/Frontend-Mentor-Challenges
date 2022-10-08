@@ -1,7 +1,16 @@
 {
-    "urls": [
-        "http://localhost:3000/",
-        "http://localhost:3000/advice-generator-app",
-        "http://localhost:3000/easybank-landing-page"
+  "defaults": {
+    "runners": [
+      "axe"
+    ],
+    "ignore": [
+      "color-contrast"
     ]
+  },
+  "urls": [
+    "http://localhost:3000/",
+    "http://localhost:3000/advice-generator-app",
+    "http://localhost:3000/easybank-landing-page",
+    "http://localhost:3000/sunnyside-landing-page"
+  ]
 }
