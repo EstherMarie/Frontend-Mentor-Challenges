@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ProjectCard = styled.article`
   border-radius: 5px;
@@ -10,7 +10,7 @@ export const ProjectCard = styled.article`
   min-height: 350px;
   max-height: 400px;
 
-  border: 1px solid #DBE5E6;
+  border: 1px solid #dbe5e6;
 
   .card_image {
     position: relative;
@@ -20,10 +20,11 @@ export const ProjectCard = styled.article`
 
     img {
       border-radius: 5px 5px 0 0;
-
     }
 
     &.wip {
+      overflow: hidden;
+
       img {
         filter: blur(3px);
       }
@@ -39,11 +40,11 @@ export const ProjectCard = styled.article`
         background-color: #ffffffad;
         width: 50%;
         font-size: 14px;
-        
+
         padding: 5px 20px;
         display: flex;
         justify-content: center;
-        
+
         transform: rotate(-30deg);
       }
     }
@@ -57,7 +58,7 @@ export const ProjectCard = styled.article`
       line-height: 2.9rem;
       margin-bottom: 16px;
     }
-  
+
     p {
       font-size: 1.4rem;
       line-height: 1.4rem;
@@ -75,11 +76,11 @@ export const ProjectCard = styled.article`
       font-size: 1.4rem;
 
       border-radius: 5px;
-      
+
       &.newbie {
         background: #6abecd;
       }
-      
+
       &.junior {
         background: rgba(170, 215, 66, 0.6);
       }
@@ -98,12 +99,12 @@ export const ProjectCard = styled.article`
     }
   }
 
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &:hover,
   &:focus {
     cursor: pointer;
-    border: 1px solid #97D1DD;
+    border: 1px solid #97d1dd;
     box-shadow: 5px 5px 5px hsla(0, 0%, 50.2%, 0.3);
   }
-`
+`;
