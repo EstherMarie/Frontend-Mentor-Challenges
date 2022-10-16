@@ -7,10 +7,12 @@ export const Container = styled.div`
   padding-inline: 22px;
   margin: 0 auto;
 
-  font-family: ${({ theme }) => theme.home.typography.fontFamily};
-  color: ${({ theme }) => theme.home.colors.earieBlack};
+  font-family: 'Barlow', sans-serif;
+  color: #1c2022;
 
-  h1, h2, h3 {
-    font-weight: ${({ theme }) => theme.home.typography.fontWeight};
+  h1,
+  h2,
+  h3 {
+    font-weight: 400;
   }
 `;
