@@ -22,7 +22,7 @@ export const MobileMenu = styled.div<MobileMenuProps>`
   ::before {
     content: '';
     position: absolute;
-    right: -10px;
+    right: -12px;
     top: -13px;
 
     border-top: 18px solid #ffffff;
