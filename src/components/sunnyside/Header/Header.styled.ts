@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
   margin-top: 34px;
-  position: relative;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
 
   .wrapper {
     --container-width: 1352px;
@@ -10,6 +12,8 @@ export const Header = styled.header`
 
     max-width: calc(var(--container-width) + (var(--padding) * 2));
     padding-inline: var(--padding);
+
+    position: relative;
 
     width: 100%;
     margin-inline: auto;
