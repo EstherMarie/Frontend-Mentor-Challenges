@@ -5,7 +5,7 @@
 |-|-|-|-|-|-|
 | [Advice Generator App](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db)| ✅ Done | [Readme](https://github.com/EstherMarie/Frontend-Mentor-Challenges/wiki/Advice-Generator-App) | [Solution](https://www.frontendmentor.io/solutions/advice-generator-app-with-react-typescript-nextjs-and-fetch-api-Nf-TFbfKub) | [Preview](https://frontend-mentor-challenges-esthermarie.vercel.app/advice-generator-app) | Junior |
 | [Easybank landing page](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN) | ✅ Done | [Readme](https://github.com/EstherMarie/Frontend-Mentor-Challenges/wiki/Easybank-Landing-Page) | [Solution](https://www.frontendmentor.io/solutions/easybank-landing-page-react-nextjs-typescript-3WFWkZx2mG) | [Preview](https://frontend-mentor-challenges-esthermarie.vercel.app/easybank-landing-page) | Intermediate |
-| [Sunnyside agency landing page](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef) | ✅ Done | Pending | Pending | [Preview](https://frontend-mentor-challenges-esthermarie.vercel.app/sunnyside-landing-page) | Junior | 
+| [Sunnyside agency landing page](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef) | ✅ Done | [Readme](https://github.com/EstherMarie/Frontend-Mentor-Challenges/wiki/Sunnyside-Landing-Page) | [Solution](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-LWbfxP3aYs) | [Preview](https://frontend-mentor-challenges-esthermarie.vercel.app/sunnyside-landing-page) | Junior | 
 
 ## 🚀 Tech Stack and other features
 
