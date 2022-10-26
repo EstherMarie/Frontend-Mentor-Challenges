@@ -21,15 +21,15 @@ export default function Home({ projects }: HomeProps) {
       <HomeMain projects={projects} />
     </>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async () => {
   const projects = await getNotionProjects();
 
   return {
     props: {
-      projects
+      projects,
     },
-    revalidate: 86400 // 1 day in seconds
+    revalidate: 86400, // 1 day in seconds
   };
 };
