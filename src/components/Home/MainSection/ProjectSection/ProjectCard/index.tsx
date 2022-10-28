@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ProjectInfo } from '../../../../../types/ProjectInfo';
+import { NotionProjectProperties } from '../../../../../types/NotionPageObject';
 import * as S from './ProjectCard.styled';
 
-export function ProjectCard({ image, link, title, difficulty, description, status }: ProjectInfo) {
+export function ProjectCard({ image, path, title, difficulty, status }: NotionProjectProperties) {
   return (
-    <Link href={link}>
+    <Link href={path}>
       <S.ProjectCard tabIndex={0}>
         <div className={`card_image ${status}`}>
           <Image
@@ -20,9 +20,6 @@ export function ProjectCard({ image, link, title, difficulty, description, statu
         <div className="card_info">
           <h3>{title}</h3>
           <div className={`card_difficulty ${difficulty.toLowerCase()}`}>{difficulty}</div>
-          {description &&
-            <p>{description}</p>
-          }
         </div>
       </S.ProjectCard>
     </Link>

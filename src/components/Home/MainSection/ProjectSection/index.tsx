@@ -1,20 +1,23 @@
-import { projectList } from "../../../../data/projectList";
+import { NotionProjectProperties } from '../../../../types/NotionPageObject';
 import { ProjectCard } from "./ProjectCard";
 import * as S from "./ProjectSection.styled";
 
-export function ProjectSection() {
+interface ProjectSectionProps {
+  projectList: NotionProjectProperties[];
+}
+
+export function ProjectSection({ projectList }: ProjectSectionProps) {
   return (
     <S.ProjectSection>
       <h2>Projects</h2>
       <div className="project_display">
-        {projectList.map(({ id, image, link, title, difficulty, description, status }) => (
+        {projectList.map(({ id, image, path, title, difficulty, status }) => (
           <ProjectCard
             key={id}
             image={image}
-            link={link}
+            path={path}
             title={title}
             difficulty={difficulty}
-            description={description}
             status={status}
           />
         ))}

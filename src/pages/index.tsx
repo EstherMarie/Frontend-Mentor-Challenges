@@ -4,10 +4,10 @@ import type { GetStaticProps } from 'next';
 import { HomeMain } from '../components/Home/MainSection';
 
 import { getNotionProjects } from '../utils/getNotionPages';
-import { NotionDatabaseObject } from '../types/NotionPageObject';
+import { NotionProjectProperties } from '../types/NotionPageObject';
 
 interface HomeProps {
-  projects: NotionDatabaseObject[];
+  projects: NotionProjectProperties[];
 }
 
 export default function Home({ projects }: HomeProps) {
@@ -18,7 +18,7 @@ export default function Home({ projects }: HomeProps) {
         <meta name="description" content="Projects from Frontend Mentor" />
       </Head>
 
-      <HomeMain />
+      <HomeMain projects={projects} />
     </>
   );
 };
