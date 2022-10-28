@@ -1,10 +1,16 @@
 name: Unit Tests
 
-on: []
+on: [pull_request]
+
+env:
+  NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+  DATABASE_ID: ${{ secrets.DATABASE_ID }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    environment: preview
 
     strategy:
       matrix:
