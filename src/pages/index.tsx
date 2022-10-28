@@ -3,7 +3,7 @@ import type { GetStaticProps } from 'next';
 
 import { HomeMain } from '../components/Home/MainSection';
 
-import { getNotionPages } from '../utils/getNotionPages';
+import { getNotionProjects } from '../utils/getNotionPages';
 import { NotionDatabaseObject } from '../types/NotionPageObject';
 
 interface HomeProps {
@@ -11,18 +11,6 @@ interface HomeProps {
 }
 
 export default function Home({ projects }: HomeProps) {
-  const projectsProperties = projects.map((project) => {
-    return project.properties;
-  });
-
-  const filteredProjects = projectsProperties.map(({ Project_Id, Description, Difficulty, Image, Path, Status, Title }) => {
-    const projectObject = { Project_Id, Description, Difficulty, Image, Path, Status, Title };
-
-    return projectObject;
-  });
-
-  console.log(filteredProjects);
-
   return (
     <>
       <Head>
@@ -36,7 +24,7 @@ export default function Home({ projects }: HomeProps) {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const projects = await getNotionPages();
+  const projects = await getNotionProjects();
 
   return {
     props: {

@@ -1,3 +1,12 @@
+export interface NotionProjectProperties {
+  id?: number;
+  title: string;
+  status: string;
+  difficulty: string;
+  image: string;
+  path: string;
+}
+
 export interface NotionDatabaseObject {
   object: string;
   id: string;
