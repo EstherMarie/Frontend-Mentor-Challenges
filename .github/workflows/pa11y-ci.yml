@@ -2,15 +2,9 @@ name: Pa11y-CI
 
 on: [push]
 
-env:
-  NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-  DATABASE_ID: ${{ secrets.DATABASE_ID }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    environment: preview
 
     strategy:
       matrix:
