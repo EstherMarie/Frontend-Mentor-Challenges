@@ -1,9 +1,16 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import type { NextPage } from 'next';
 import Head from 'next/head';
+import type { GetStaticProps } from 'next';
+
 import { HomeMain } from '../components/Home/MainSection';
 
-const Home: NextPage = () => {
+import { getNotionProjects } from '../utils/getNotionPages';
+import { NotionProjectProperties } from '../types/NotionPageObject';
+
+interface HomeProps {
+  projects: NotionProjectProperties[];
+}
+
+export default function Home({ projects }: HomeProps) {
   return (
     <>
       <Head>
@@ -11,9 +18,18 @@ const Home: NextPage = () => {
         <meta name="description" content="Projects from Frontend Mentor" />
       </Head>
 
-      <HomeMain />
+      <HomeMain projects={projects} />
     </>
   );
 };
 
-export default Home;
+export const getStaticProps: GetStaticProps = async () => {
+  const projects = await getNotionProjects();
+
+  return {
+    props: {
+      projects
+    },
+    revalidate: 86400 // 1 day in seconds
+  };
+};
