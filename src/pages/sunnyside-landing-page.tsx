@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Header } from '../components/sunnyside/Header';
 import { Banner } from '../components/sunnyside/Banner';
+import { Footer } from '../components/sunnyside/Footer';
 
 export default function SunnysideLandingPage() {
   return (
@@ -12,10 +13,11 @@ export default function SunnysideLandingPage() {
           content="We are a full-service creative agency specializing in helping brands grow fast."
         />
       </Head>
+      <Header />
       <main>
-        <Header />
         <Banner />
       </main>
+      <Footer />
     </>
   );
 }
