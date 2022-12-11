@@ -22,6 +22,8 @@ export const button = styled.button<buttonProps>`
     props.buttonVariant === 'desktop' ? '#ffffff' : '#FBD601'};
   transition: all 0.2s ease-in-out;
 
+  text-transform: uppercase;
+
   &:hover,
   &:active {
     cursor: pointer;

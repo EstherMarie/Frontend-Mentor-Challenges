@@ -9,7 +9,7 @@ export function Banner() {
     <S.Banner>
       <Container>
         <S.Content>
-          <h1>WE ARE CREATIVES</h1>
+          <h1>We are Creatives</h1>
 
           <Image src={arrowDownIcon} alt="" width={36} height={114} />
         </S.Content>
