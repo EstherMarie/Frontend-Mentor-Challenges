@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Header } from '../components/sunnyside/Header';
 import { Banner } from '../components/sunnyside/Banner';
+import { Grid } from '../components/sunnyside/Grid';
 import { Footer } from '../components/sunnyside/Footer';
 
 export default function SunnysideLandingPage() {
@@ -16,6 +17,7 @@ export default function SunnysideLandingPage() {
       <Header />
       <main>
         <Banner />
+        <Grid />
       </main>
       <Footer />
     </>
