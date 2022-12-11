@@ -20,7 +20,7 @@ export const GridSection = styled.div<StyledGridProps>`
   max-width: 2460px;
   margin-inline: auto;
 
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     flex-direction: ${(props) =>
       props.isReverse === true ? 'row-reverse' : 'row'};
   }
@@ -62,7 +62,7 @@ export const TextArea = styled.div`
       theme.sunnysideLandingPage.colors.neutral.veryDarkGrayishBlue};
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     width: 50%;
     padding-inline: 5%;
 
@@ -130,7 +130,7 @@ export const LearnMoreCTA = styled.div<StyledCTAProps>`
     z-index: 2;
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     margin-inline: unset;
     text-align: left;
   }
@@ -141,7 +141,7 @@ export const ImageArea = styled.div`
   width: 100vw;
   height: 313px;
 
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     width: 50%;
     height: 600px;
   }
@@ -200,7 +200,7 @@ export const LastRowGrid = styled.div`
     }
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     width: 50%;
     height: 600px;
 

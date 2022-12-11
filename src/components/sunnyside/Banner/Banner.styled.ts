@@ -11,6 +11,8 @@ export const Banner = styled.section`
   max-width: 2460px;
   margin-inline: auto;
 
+  text-transform: uppercase;
+
   @media (min-width: 576px) {
     background-image: url('/images/sunnyside/desktop/image-header.jpg');
   }
