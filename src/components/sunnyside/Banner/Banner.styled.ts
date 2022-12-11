@@ -8,6 +8,9 @@ export const Banner = styled.section`
 
   height: 536px;
 
+  max-width: 2460px;
+  margin-inline: auto;
+
   @media (min-width: 576px) {
     background-image: url('/images/sunnyside/desktop/image-header.jpg');
   }
