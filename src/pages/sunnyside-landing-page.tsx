@@ -3,6 +3,7 @@ import { Header } from '../components/sunnyside/Header';
 import { Banner } from '../components/sunnyside/Banner';
 import { Grid } from '../components/sunnyside/Grid';
 import { Testimonials } from '../components/sunnyside/Testimonials';
+import { DisplayImages } from '../components/sunnyside/DisplayImages';
 import { Footer } from '../components/sunnyside/Footer';
 
 export default function SunnysideLandingPage() {
@@ -20,6 +21,7 @@ export default function SunnysideLandingPage() {
         <Banner />
         <Grid />
         <Testimonials />
+        <DisplayImages />
       </main>
       <Footer />
     </>
