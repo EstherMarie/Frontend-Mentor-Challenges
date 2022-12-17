@@ -60,7 +60,7 @@ export function GridSection({
               <p>
                 Great design makes you memorable. We deliver artwork that
                 underscores your brand message and captures potential
-                client&apos;s attention.
+                clients' attention.
               </p>
             </div>
           </S.LastRowGrid>
