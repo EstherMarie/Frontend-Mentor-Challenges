@@ -5,10 +5,10 @@ export default function AdviceGeneratorApp() {
   return (
     <>
       <Head>
-        <title>Frontend Mentor | Advice generator app</title>
+        <title>Advice generator app | Frontend Mentor</title>
         <meta
-          name='description'
-          content='Get random quotes of advice with this advice generator app!'
+          name="description"
+          content="Get random quotes of advice with this advice generator app!"
         />
       </Head>
       <Card />
