@@ -37,6 +37,10 @@ export const ProjectSection = styled.section`
     justify-items: center;
     grid-template-columns: 1fr;
 
+    a {
+      width: 100%;
+    }
+
     @media (min-width: 576px) {
       grid-template-columns: repeat(2, 1fr);
     }

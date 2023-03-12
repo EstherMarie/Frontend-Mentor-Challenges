@@ -7,16 +7,17 @@ export const ProjectCard = styled.article`
 
   width: 100%;
   max-width: 320px;
-  min-height: 350px;
-  max-height: 400px;
+  min-height: 320px;
+  max-height: 350px;
 
   border: 1px solid #dbe5e6;
 
   .card_image {
     position: relative;
-    max-width: 320px;
+    width: 100%;
     max-height: 200px;
     height: 100%;
+    aspect-ratio: 4/3;
 
     img {
       border-radius: 5px 5px 0 0;
@@ -52,6 +53,7 @@ export const ProjectCard = styled.article`
 
   .card_info {
     padding: 20px;
+    color: #1c2022;
 
     h3 {
       font-size: 2.4rem;
