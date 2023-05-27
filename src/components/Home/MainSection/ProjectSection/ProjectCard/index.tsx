@@ -11,9 +11,11 @@ export function ProjectCard({ image, path, title, difficulty, status }: NotionPr
           <Image
             src={image}
             alt=''
-            layout='fill'
-            objectFit='cover'
-            objectPosition='top'
+            fill
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'top'
+            }}
           />
         </div>
 
