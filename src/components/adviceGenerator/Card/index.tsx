@@ -13,16 +13,12 @@ export default function Card() {
     fetchData();
   }, []);
 
-  function fetchData() {
-    fetch('https://api.adviceslip.com/advice', {
-      cache: 'no-cache',
+  async function fetchData() {
+    const response = await fetch('https://api.adviceslip.com/advice', {
+      cache: 'no-cache'
     })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        setData(data);
-      });
+    const data = await response.json()
+    setData(data)
   }
 
   return (
